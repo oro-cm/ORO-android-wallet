@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="symbol_to" translatable="false">→</string>
+	<string name="symbol_from" translatable="false">←</string>
+	<string name="symbol_internal" translatable="false">⇄</string>
+	<string name="app_name" translatable="false">Oro</string>
+
+	<string-array name="preferences_precision_values" translatable="false">
+		<item>3</item>
+	</string-array>
+	<string-array name="preferences_precision_labels" translatable="false">
+		<item>ORO, 3 digits</item>
+	</string-array>
+
+</resources>

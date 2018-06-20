@@ -1,0 +1,94 @@
+apply plugin: 'com.android.application'
+apply plugin: 'androidsvgdrawable'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.4'
+    }
+}
+
+dependencies {
+    implementation(project(':integration-android')) {
+        exclude(group: 'com.google.android', module: 'android')
+    }
+    implementation 'com.android.support:support-annotations:22.0.0'
+    implementation 'com.android.support:support-v4:22.0.0'
+    implementation 'com.android.support:support-v13:22.0.0'
+    implementation 'com.android.support:recyclerview-v7:22.0.0'
+    implementation 'com.android.support:cardview-v7:22.0.0'
+    implementation fileTree(include: ['*.jar'], dir: '../libs')
+    //implementation 'org.oroj:oroj-core:0.12.3'
+    implementation 'com.google.zxing:core:3.2.0'
+    //    implementation 'org.slf4j:slf4j-api:1.7.12'
+    implementation('com.github.tony19:logback-android-classic:1.1.1-3') {
+        exclude(group: 'com.google.android', module: 'android')
+    }
+    implementation 'com.github.tony19:logback-android-core:1.1.1-3'
+    implementation 'com.google.code.findbugs:jsr305:2.0.3'
+    testImplementation 'junit:junit:4.11'
+}
+
+ext {
+    archivesBaseName = 'oro-wallet'
+}
+
+android {
+    signingConfigs {
+    }
+    defaultConfig {
+        applicationId "org.oro.wallet"
+    }
+    compileSdkVersion 'android-16'
+    buildToolsVersion '22.0.1'
+    lintOptions { abortOnError false }
+    buildTypes {
+        all {
+            minifyEnabled true
+            proguardFile 'proguard.cfg'
+        }
+        debug {
+            debuggable true
+        }
+    }
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+        test {
+            java.srcDirs = ['test']
+            resources.srcDirs = ['test']
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'lib/x86_64/darwin/libscrypt.dylib'
+        exclude 'lib/x86_64/freebsd/libscrypt.so'
+        exclude 'lib/x86_64/linux/libscrypt.so'
+        exclude 'com/google/thirdparty/publicsuffix/PublicSuffixPatterns.gwt.xml'
+        exclude 'com/google/thirdparty/publicsuffix/PublicSuffixType.gwt.xml'
+        exclude 'org/oroj/crypto/mnemonic/wordlist/english.txt'
+        exclude 'org/oroj/crypto/cacerts'
+        exclude 'javax/annotation/CheckReturnValue.java'
+        exclude 'javax/annotation/concurrent/Immutable.java'
+        exclude 'javax/annotation/MatchesPattern.java'
+        exclude 'javax/annotation/*'
+        exclude 'javax/annotation/concurrent/GuardedBy.java'
+        exclude 'javax/annotation/concurrent/NotThreadSafe.java'
+        exclude 'javax/annotation/meta/*'
+        exclude 'javax/annotation/concurrent/*'
+    }
+}
+
+task svgToPng(type: fr.avianey.androidsvgdrawable.gradle.SvgDrawableTask) {
+    from = file('graphics')
+    to = file('res')
+    targetedDensities = ['hdpi', 'xhdpi', 'xxhdpi']
+    outputFormat = 'PNG'
+}

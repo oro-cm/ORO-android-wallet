@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+  <string name="help_wallet">
+<![CDATA[
+		<p>
+			I den övre delen av skärmen visas ditt saldo i Oro samt värdet i en vald nationell valuta.
+			Tryck för att lista nationella valutor, och välj en av valutorna för att visa den som standard.
+		</p>
+		<p>
+			QR-koden till höger inehåller din bitcoinaddress och kan scannas av den som vill skicka Oro till dig.
+			Tryck med fingret på QR-koden för att få en större version av den.
+		</p>
+		<p>
+			Nedre delen av skärmen visar en lista med dina transaktioner, och från början är den naturligtvis tom.
+			Pågående transaktioner är gråa tills de är bekräftande.
+			Tryck med fingret på en transaktion så kan du spara avsändarens eller mottagarens adress till din adressbok.
+			Dra med fingret åt vänster eller höger för att filtrera listan.
+		</p>
+		<p>
+			Du kan skicka eller ta emot Oro genom att trycka på knapparna i aktivitetslistan.
+			Fler val är möjliga i menyn.
+		</p>
+	]]>
+	</string>
+  <string name="help_request_coins">
+<![CDATA[
+		<p>
+			Med denna dialog kan du ta emot Oro från någon annan (som redan har Oro Wallet installerad på sin telefon).
+		</p>
+		<p>
+			Först anger du hur många Oro du vill att de skickar.
+		</p>
+		<p>
+			Sedan kan den andra personen scanna QR-koden.
+			Eller så använder du \"Dela\" knappen i aktivitetslistan för att skicka din uppmaning att skicka Oro.
+			Den andra personen behöver sedan bara klicka på den Oro-URL du skickat.
+		</p>
+		<p>
+			Sedan kommer den andra personen att få se en dialogruta där alla fält redan är ifyllda.
+			Om han eller hon sedan accapterar transaktionen så skickas Oro till dig.
+		</p>
+	]]>
+	</string>
+  <string name="help_send_coins">
+<![CDATA[
+		<p>
+			Du har påbörjat skickandet av Oro.
+			Du kom hit från huvudskärmen eller genom att klicka på en Oro-URL i din webbläsare.
+		</p>
+		<p>
+			Ange först vilken Oro adress du vill skicka till.
+			Adressen kan automatiskt fyllas i om den börjar med någon av adresserna i din adressbok.
+			Du kan också scanna en QR-kod innehållande en Oro-adress, genom att trycka på QR knappen i aktivitetslistan.
+		</p>
+		<p>
+			Sedan kan du se hur många Oro du för tillfället kan skicka.
+			Om det antalet skiljer sig från det som visas på huvudskärmen, så beror det på hittills obekräftade överföringar som du ännu inte får använda.
+		</p>
+		<p>
+			Slutligen anger du hur många Oro du skicka.
+		</p>
+		<p>
+			Du kan skapa en transaktion även om du inte är online.
+			Den kommer att skickas nästa gång Oro Wallet startas.
+			Om du vill att en transaktion ska hanteras så fort som möjligt, se till att ha bra uppkoppling till internet (exempelvis ett WLAN).
+		</p>
+		<p>
+			Notera:
+			Transaktioner kan inte stoppas!
+			Kontrollera alltid adressen du skickar till.
+		</p>
+	]]>
+	</string>
+  <string name="help_safety">
+<![CDATA[
+		<p>
+			<b>Några ord om säkerhet och Oro:</n>
+		</p>
+		<p>
+			Dina Oro i Oro Wallet sparas på din Android telefon.
+			<b>Om du tappar bort din telefon, så tappar du bort dina Oro.</b>
+			Precis som pengar i din vanliga plånbok.
+		</p>
+		<p>
+			<b>Innan du avinstallerar Oro Wallet</b> (eller tar bort appens data/rensar din telefon), <b>skicka dina Oro till en annan wallet</b>.
+			Alla kvarvarande Oro kommer att försvinna.
+		</p>
+		<p>
+			<b>Transaktioner kan inte stoppas</b>.
+			Efter att du skickat Oro finns det inget sätt att få dem tillbaka, annat än om du vet vem mottagaren är, och han/hon skickar dem tillbaka.
+		</p>
+		<p>
+			<b>Se till att skydda din telefon!</b>
+			Installera endast appar du helt litar på.
+			En elak app kan försöka stjäla din wallet.
+		</p>
+		<p>
+			Utsätt dig inte för onödig risk!
+			<b>Använd bara Oro Wallet med mindre belopp</b> för daglig användning.
+		</p>
+	]]>
+	</string>
+</resources>
